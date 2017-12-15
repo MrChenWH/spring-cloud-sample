@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: discovery-eureka-peer2
+server:
+  port: 9762
+eureka:
+  instance:
+    hostname: peer2                               # 指定当profile=peer2时，主机名
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:9761/eureka/      # 将自己注册到peer1这个Eureka上面去
