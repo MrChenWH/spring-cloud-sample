@@ -24,6 +24,10 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+    <modules>
+        <module>config-server</module>
+        <module>discovery-eureka-peer1</module>
+    </modules>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -36,6 +40,14 @@
         </dependencies>
     </dependencyManagement>
 
+    <dependencies>
+        <!--测试-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 	<build>
 		<plugins>
 			<plugin>
