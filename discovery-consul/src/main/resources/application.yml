@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    consul:
+      host: 192.168.10.135
+      port: 8500
+      discovery:
+        healthCheckPath: ${management.context-path}/health
+        healthCheckInterval: 15s
