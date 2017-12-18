@@ -1,0 +1,15 @@
+server:
+  port: 9050
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MrChenWH/spring-cloud-sample.git
+          search-paths: config-repo
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:9761/eureka/,http://peer2:9762/eureka/
