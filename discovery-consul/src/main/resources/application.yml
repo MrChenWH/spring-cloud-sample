@@ -1,8 +1,11 @@
 spring:
   cloud:
     consul:
-      host: 192.168.10.135
+      host: 192.168.2.215
       port: 8500
       discovery:
-        healthCheckPath: ${management.context-path}/health
+        healthCheckPath: /health
         healthCheckInterval: 15s
+        instanceId: ${spring.application.name}
+  application:
+    name: discovery-consul
