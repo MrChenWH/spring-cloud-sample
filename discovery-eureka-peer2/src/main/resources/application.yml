@@ -5,7 +5,9 @@ server:
   port: 9762
 eureka:
   instance:
+    metadataMap.zone: zone2                       #将注册分别在不同区域运行，增加该区域的高可用性
     hostname: peer2                               # 指定当profile=peer2时，主机名
   client:
-    serviceUrl:
-      defaultZone: http://peer1:9761/eureka/      # 将自己注册到peer1这个Eureka上面去
+    preferSameZoneEureka: true
+#    healthcheck.enabled: true 疑似已经取消该参数，每个应用基本上都是要使用到的，因此设置这个参数有些多此一举的感觉
+    serviceUrl.defaultZone: http://peer1:9761/eureka/      # 将自己注册到peer1这个Eureka上面去

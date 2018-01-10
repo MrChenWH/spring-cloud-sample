@@ -1,7 +1,7 @@
 package com.example.cwh;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
@@ -13,7 +13,8 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @SpringBootApplication
 public class DiscoveryEurekaPeer2Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DiscoveryEurekaPeer2Application.class, args);
-	}
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(DiscoveryEurekaPeer2Application.class).web(true).run(args);
+
+    }
 }
