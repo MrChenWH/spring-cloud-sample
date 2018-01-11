@@ -30,6 +30,7 @@
         <module>discovery-consul</module>
         <module>hystrix-turbine</module>
         <module>provider-user</module>
+        <module>consumer-movie-feign-with-hystrix-stream</module>
     </modules>
     <dependencyManagement>
         <dependencies>
