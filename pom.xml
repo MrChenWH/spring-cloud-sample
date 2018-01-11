@@ -28,6 +28,8 @@
         <module>discovery-eureka-peer1</module>
         <module>discovery-eureka-peer2</module>
         <module>discovery-consul</module>
+        <module>hystrix-turbine</module>
+        <module>provider-user</module>
     </modules>
     <dependencyManagement>
         <dependencies>
