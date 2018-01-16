@@ -7,8 +7,14 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/MrChenWH/spring-cloud-sample.git
-          search-paths: config-repo
+          uri: https://github.com/MrChenWH/sample-config-repo.git
+    bus:
+      trace:
+        enabled: true #跟踪总线事件（RemoteApplicationEvent的子类）
+    stream.kafka.binder:
+      defaultBrokerPort: 192.168.240.42:8092,192.168.240.43:8092,192.168.240.44:8092
+      defaultZkPort: 192.168.240.15:2181,192.168.240.15:2182,192.168.240.15:2183
+
 eureka:
   client:
     serviceUrl:
