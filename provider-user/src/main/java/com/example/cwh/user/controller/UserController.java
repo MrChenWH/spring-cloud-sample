@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * ② 为后来的服务做提供
  * @author eacdy
  */
-@RestController
+@RestController("userProvider")
 public class UserController {
     @Autowired
     private DiscoveryClient discoveryClient;

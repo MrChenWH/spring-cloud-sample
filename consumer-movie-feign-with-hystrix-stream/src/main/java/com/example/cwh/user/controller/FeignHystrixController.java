@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author cwh
  */
-@RestController
+@RestController("userConsumer")
 public class FeignHystrixController {
     @Autowired
     private UserFeignHystrixClient userFeignHystrixClient;

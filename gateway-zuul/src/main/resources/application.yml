@@ -1,0 +1,14 @@
+spring.application.name: gateway-zuul
+server.port: 8888
+
+zuul.routes.producer.path: /producer/**
+zuul.routes.producer.serviceId: producer
+
+zuul.routes.userProvider.path: /userProvider/**
+zuul.routes.userProvider.serviceId: provider-user
+
+zuul.routes.userConsumer.path: /userConsumer/**
+zuul.routes.userConsumer.serviceId: consumer-movie-feign-with-hystrix-stream
+
+
+eureka.client.serviceUrl.defaultZone: http://peer1:9761/eureka/,http://peer2:9762/eureka/

@@ -31,6 +31,9 @@
         <module>hystrix-turbine</module>
         <module>provider-user</module>
         <module>consumer-movie-feign-with-hystrix-stream</module>
+        <module>gateway-zuul</module>
+        <module>producer</module>
+        <module>producer2</module>
     </modules>
     <dependencyManagement>
         <dependencies>
