@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
- * 注册中信Consul
+ * 注册中心Consul
  *
  * @author cwh
  */

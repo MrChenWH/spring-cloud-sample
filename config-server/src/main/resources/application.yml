@@ -11,11 +11,20 @@ spring:
     bus:
       trace:
         enabled: true #跟踪总线事件（RemoteApplicationEvent的子类）
-    stream.kafka.binder:
-      defaultBrokerPort: 192.168.240.42:8092,192.168.240.43:8092,192.168.240.44:8092
-      defaultZkPort: 192.168.240.15:2181,192.168.240.15:2182,192.168.240.15:2183
+  rabbitmq:
+    host: 192.168.56.105
+    port: 5672
+    username: cwh
+    password: q87871877
+#    stream.kafka.binder:
+#      defaultBrokerPort: 192.168.240.42:8092,192.168.240.43:8092,192.168.240.44:8092
+#      defaultZkPort: 192.168.240.15:2181,192.168.240.15:2182,192.168.240.15:2183
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://peer1:9761/eureka/,http://peer2:9762/eureka/
+
+management:
+  security:
+     enabled: false #关闭权限

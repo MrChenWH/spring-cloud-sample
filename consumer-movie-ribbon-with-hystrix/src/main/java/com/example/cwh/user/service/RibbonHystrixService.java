@@ -24,7 +24,7 @@ public class RibbonHystrixService {
      */
     @HystrixCommand(fallbackMethod = "fallback")
     public User findById(Long id) {
-        return this.restTemplate.getForObject("http://provider-user/" + id, User.class);
+        return this.restTemplate.getForObject("http://producer/hello?name=" + id, User.class);
     }
 
     /**

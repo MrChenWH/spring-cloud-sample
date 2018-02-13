@@ -24,6 +24,7 @@
 	</properties>
 
     <modules>
+        <module>admin</module>
         <module>config-server</module>
         <module>discovery-eureka-peer1</module>
         <module>discovery-eureka-peer2</module>
@@ -53,6 +54,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 	<build>
